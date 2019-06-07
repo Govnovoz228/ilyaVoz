@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+   }
+
+html {
+	overflow:  hidden;
+}
+
+body {
+	background-color: #3D47CB;
+}
+
+audio {
+  display: none;
+}
+
+.container{
+	display: absolute;
+	position: fixed;
+	margin: auto;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.toplink {
+	display: block;
+	position: absolute;
+	width: 100vw; 
+	height: 100vh; 
+	padding-top: 80vh; 
+	font-size: 3.5vh;
+	text-decoration: none;
+	color: #FFF; 
+	cursor: default;
+	animation: toplinknone 0.1ms linear 0.1ms 1;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+	text-shadow: 1px 1px 2px black;
+	opacity: .6;
+	-webkit-touch-callout: none; 
+	-webkit-user-select: none;  
+	-khtml-user-select: none;   
+	-moz-user-select: none;      
+	-ms-user-select: none;       
+	user-select: none;  
+	text-align: center;
+}
+
+.toplink:active {
+	animation-play-state: running;
+}
+
+@keyframes toplinknone {
+	to{ 
+		width: 1%; 
+		height: 1%; 
+		left: 1000vh; 
+		top:1000vh;
+	 }
+}
+
+/*Стили для флага*/
+
+.box-flag{
+	width: 70vh; 
+	height: 50vh; 
+	position: absolute;
+	margin: auto;
+	top: 0; 
+	bottom: 0;
+	left: 0; 
+	right: 0;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.line {
+	z-index: 3;
+	width: 100%; 
+	height: 12.5%;
+	transition: .2s linear
+}
+
+.line:hover {
+	box-shadow: 0px 0px 1vh 0.5vh #fff;
+	z-index: 5;
+	width: 110%;
+	border-radius: 1vh;
+}
+
+.line1 {
+	background-color: #414FCC;
+	animation: emergence .6s linear 1.2s 1 reverse;
+	animation-fill-mode: forwards; 
+}
+
+.line2 {
+	background-color: #545BD0;
+	animation: emergence .6s linear 1.1s 1 reverse;
+	animation-fill-mode: forwards; 
+}
+
+.line3 {
+	background-color: #6D75D8;
+	animation: emergence .6s linear 1s 1 reverse;
+	animation-fill-mode: forwards; 
+}
+
+@keyframes emergence {
+	to{ box-shadow: 0px 0px 1vh 0.5vh #fff; }
+}
+
+/*Стили для ромбов*/
+
+.box-rhombus {
+	width: 70vh; 
+	height: 30vh; 
+	position: fixed;
+	margin: auto;
+	top: 0;
+	left: 0; 
+	right: 0;
+	z-index: 1;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+}
+
+.common-to-rhombuses {
+	width: 2.5vh;
+    height: 2.5vh;
+    background: #9498E1;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 0;
+}
+
+.rhombus1 {	
+	animation: flight-of-rhombuses 10s linear 2s infinite;
+}
+
+.rhombus2 {	
+	animation: flight-of-rhombuses 10s linear 8s infinite;
+}
+
+.rhombus3 {	
+	animation: flight-of-rhombuses 10s linear 6s infinite;
+}
+
+.rhombus4 {	
+	animation: flight-of-rhombuses 10s linear 9.5s infinite;
+}
+
+.rhombus5 {	
+	animation: flight-of-rhombuses 10s linear 3s infinite;
+}
+
+.rhombus6 {	
+	animation: flight-of-rhombuses 10s linear 7s infinite;
+}
+
+.rhombus7 {	
+	animation: flight-of-rhombuses 10s linear 6.3s infinite;
+}
+
+.rhombus8 {	
+	animation: flight-of-rhombuses 10s linear 2.5s infinite;
+}
+
+.rhombus9 {	
+	animation: flight-of-rhombuses 10s linear 9s infinite;
+}
+
+.rhombus10 {	
+	animation: flight-of-rhombuses 10s linear 4s infinite;
+}
+
+@keyframes flight-of-rhombuses {
+	to{ 
+		margin-bottom: 35vh;
+		opacity: 1;
+	}
+}
+
+/*Стили для подвала*/
+
+.box-info{
+	width: 70vw; 
+	height: 5vh; 
+	position: fixed;
+	margin: auto;
+	bottom: 0;
+	left: 0; 
+	right: 0;
+	z-index: 1;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.instagram {
+	width: 4vh;
+	height: 4vh;
+	padding-bottom: 0.5vh;
+	/*margin-right: 5vh;*/
+	opacity: .2;
+}
+
+.github {
+	width: 12vh;
+	height: 7vh;
+	/*margin-left: 5vh;*/
+	opacity: .2;
+	margin-right: 1.5vh;
+}
